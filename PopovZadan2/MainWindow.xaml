@@ -1,0 +1,76 @@
+﻿<Window x:Class="PopovZadan2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PopovZadan2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border Background="AntiqueWhite">
+        </Border>
+        <StackPanel Orientation="Horizontal">
+            <Button Height="40" Width="100" Margin="10, 0 ,0 ,0" Content="Подключиться" Background="Green" Click="Button_Click"></Button>
+            <Button Height="40" Width="100" Margin="10, 0 ,0 ,0" Content="Отключиться" Background="Red" Click="Button_Click_1"></Button>
+            <TextBlock x:Name="Out" Text="Сервер не подключен" Margin="10, 0 ,0 ,0" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="1">
+                <Button Height="30" Width="220" HorizontalAlignment="Center" Content="Кол-во овощей" Background="AliceBlue" Margin="0,4" Click="Button_Click_7"></Button>
+                <Button Height="30" Width="220" HorizontalAlignment="Center" Content="Кол-во овощей фруктов" Background="AliceBlue" Margin="0,4" Click="Button_Click_8"></Button>
+                <Button Height="30" Width="220" HorizontalAlignment="Center" Content="Кол-во овощей и фруктов одного цвета" Background="AliceBlue" Margin="0,4" Click="Button_Click_9"></Button>
+                <Button Height="30" Width="220" HorizontalAlignment="Center" Content="Кол-во овощей и фруктов каждого цвета" Background="AliceBlue" Margin="0,4" Click="Button_Click_10"></Button>
+                <Button Height="30" Width="220" HorizontalAlignment="Center" Content= "Кол-во с кал. ниже" Background="AliceBlue" Margin="0,4" Click="Button_Click_11"></Button>
+                <Button Height="30" Width="220" HorizontalAlignment="Center" Content= "Кол-во с кал. выше" Background="AliceBlue" Margin="0,4" Click="Button_Click_13" ></Button>
+                <Button Height="30" Width="220" HorizontalAlignment="Center" Content= "Кол-во с кал. в указ. диапазоне" Background="AliceBlue" Margin="0,4" Click="Button_Click_14" ></Button>
+                <Button Height="30" Width="220" HorizontalAlignment="Center" Content= "Кол-во с желтым или красным" Background="AliceBlue" Margin="0,4" Click="Button_Click_15" ></Button>
+
+                <TextBlock x:Name="Viv" Text="Пусто" HorizontalAlignment="Center" />
+            </StackPanel>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="270"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0">
+                        <Button Height="30" Width="220" HorizontalAlignment="Center" Content="Вся таблица" Background="AliceBlue" Margin="0,5" Click="Button_Click_2"></Button>
+                        <Button Height="30" Width="220" HorizontalAlignment="Center" Content="Все названия" Background="AliceBlue" Margin="0,5" Click="Button_Click_3"></Button>
+                        <Button Height="30" Width="220" HorizontalAlignment="Center" Content="Все цвета" Background="AliceBlue" Margin="0,5" Click="Button_Click_4"></Button>
+                        <Button Height="30" Width="220" HorizontalAlignment="Center" Content="Макс. кал." Background="AliceBlue" Margin="0,5" Click="Button_Click_5"></Button>
+                        <Button Height="30" Width="220" HorizontalAlignment="Center" Content="Мин. кал." Background="AliceBlue" Margin="0,5" Click="Button_Click_6"></Button>
+                        <Button Height="30" Width="220" HorizontalAlignment="Center" Content="Ср. кал." Background="AliceBlue" Margin="0,5" Click="Button_Click_12"></Button>
+                    </StackPanel>
+
+                    <TextBox x:Name="InColor"  Grid.Column="1" Text="Цвет" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="80,-80,0,0"/>
+
+                    <TextBox x:Name="Ind" Grid.Column="1" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="120,60,0,0"/>
+                    <TextBox x:Name="Ind1" Grid.Column="1" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="120,140,0,0"/>
+                    <TextBox x:Name="Ind2" Grid.Column="1" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="120,220,0,0"/>
+                    <TextBox x:Name="Ind3" Grid.Column="1" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="80,220,0,0"/>
+
+                </Grid>
+
+                <TextBlock x:Name="Vivod" Grid.Row="1" Text="Пусто"/>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>
